@@ -1,12 +1,13 @@
 // db.js
 const mysql = require('mysql2/promise');
-// Create a pool of connections
+
+// Create a pool of connections with hardcoded values
 const connection = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'mydatabase',
-  connectionLimit: 10, // Adjust the pool size as needed
+  host: 'localhost',    // Replace with your DB host
+  user: 'root',         // Replace with your DB user
+  password: 'Narasimha123', // Replace with your DB password
+  database: 'mydatabase', // Replace with your DB name
+  connectionLimit: 10,  // Adjust the pool size as needed
 });
 
 // Test the connection
